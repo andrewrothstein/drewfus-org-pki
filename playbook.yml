@@ -1,0 +1,26 @@
+---
+- hosts: pki
+  roles:
+    - role: "~/git/github.com/andrewrothstein/ansible-pki"
+      pki_names:
+        - C: US
+          L: 'Englewood'
+          O: 'Drewfus'
+          OU: WWW
+          ST: 'New Jersey'
+      pki_ca:
+        cname: ca.drewfus.org
+        altips:
+          - 192.168.0.1
+      pki_servers:
+        - cname: node-1.drewfus.org
+          altips:
+            - 192.168.0.2
+        - cname: node-2.drewfus.org
+          altips:
+            - 192.168.0.3
+        - cname: node-3.drewfus.org
+          altips:
+            - 192.168.0.4
+        
+        
