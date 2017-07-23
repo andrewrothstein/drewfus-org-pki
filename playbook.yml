@@ -2,12 +2,13 @@
 - hosts: localhost
   roles:
     - role: andrewrothstein.pki
+      pki_dir: ~/drewfus-org-pki
       pki_names:
         - C: US
-          L: 'Englewood'
-          O: 'Drewfus'
+          L: Englewood
+          O: Drewfus
           OU: WWW
-          ST: 'New Jersey'
+          ST: New Jersey
       pki_ca:
         cname: ca.drewfus.org
         altips:
