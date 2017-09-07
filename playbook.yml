@@ -2,7 +2,7 @@
 - hosts: localhost
   roles:
     - role: andrewrothstein.pki
-      pki_dir: ~/drewfus-org-pki
+      pki_dir: ~/pki/drewfus-org
       pki_names:
         - C: US
           L: Englewood
@@ -11,12 +11,17 @@
           ST: New Jersey
       pki_ca:
         cname: ca.drewfus.org
-        altips:
-          - 192.168.1.1
       pki_servers:
+        - cname: edge.drewfus.org
+          altips:
+            - 192.168.1.1
+        - cname: freenas.drewfus.org
+          altips:
+            - 192.168.1.125
+            - 172.17.8.2
         - cname: matchbox.drewfus.org
           altips:
-            - 192.168.1.109
-            - 172.16.0.1
+            - 192.168.1.30
+            - 172.17.8.1
         
         
