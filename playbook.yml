@@ -15,13 +15,18 @@
         - cname: edge.drewfus.org
           altips:
             - 192.168.1.1
-        - cname: freenas.drewfus.org
-          altips:
-            - 192.168.1.125
-            - 172.17.8.2
         - cname: matchbox.drewfus.org
           altips:
             - 192.168.1.30
-            - 172.17.8.1
-        
-        
+        - cname: freenas.drewfus.org
+          altips:
+            - 192.168.1.125
+        - cname: core-0001.drewfus.org
+          altips:
+            - 192.168.1.128
+        - cname: core-0002.drewfus.org
+          altips:
+            - 192.168.1.129
+        - cname: core-0003.drewfus.org
+          altips:
+            - 192.168.1.131
