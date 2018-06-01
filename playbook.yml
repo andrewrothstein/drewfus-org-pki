@@ -2,7 +2,7 @@
 - hosts: localhost
   roles:
     - role: andrewrothstein.pki
-      pki_dir: ~/pki/drewfus-org
+      pki_dir: /Users/drew/pki/drewfus-org
       pki_names:
         - C: US
           L: Englewood
@@ -30,3 +30,6 @@
         - cname: core-0003.drewfus.org
           altips:
             - 192.168.1.131
+        - cname: vaio.drewfus.org
+          altips:
+            - 192.168.1.136
