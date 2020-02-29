@@ -1,4 +1,4 @@
 **~
-.ansible-roles
+.ansible-roles/
 *.retry
-
+pki-dir/
