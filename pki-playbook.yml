@@ -12,24 +12,32 @@
           OU: WWW
           ST: New Jersey
       pki_ca:
-        cname: ca.{{ domain }}
+        expiry: '8760h'
+        pathlen: 0
+        cname: ca
+        sans:
+          - ca.{{ domain }}
       pki_servers:
         - cname: edge
+          profile: server
           sans:
             - edge.{{ domain }}
           altips:
             - 192.168.1.1
         - cname: matchbox
+          profile: server
           sans:
             - matchbox.{{ domain }}
           altips:
             - 192.168.1.30
         - cname: freenas
+          profile: server
           sans:
             - freenas.{{ domain }}
           altips:
             - 192.168.1.175
         - cname: vault
+          profile: server
           sans:
             - vault.{{ domain }}
           altips:
