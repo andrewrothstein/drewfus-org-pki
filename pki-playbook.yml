@@ -2,9 +2,10 @@
 - hosts: localhost
   vars:
     domain: nj.drewfus.org
+    pkis_dir: '{{ playbook_dir }}/pki-dir'
   roles:
     - role: andrewrothstein.pki
-      pki_dir: '{{ playbook_dir }}/pki-dir/{{ domain }}'
+      pki_dir: '{{ pkis_dir }}/{{ domain }}'
       pki_names:
         - C: US
           L: Englewood
@@ -42,3 +43,9 @@
             - vault.{{ domain }}
           altips:
             - 192.168.1.136
+        - cname: gateway
+          profile: server
+          sans:
+            - gateway.{{ domain }}
+          altips:
+            - 192.168.1.185
