@@ -25,27 +25,15 @@
             - edge.{{ domain }}
           altips:
             - 192.168.1.1
-        - cname: matchbox
-          profile: server
-          sans:
-            - matchbox.{{ domain }}
-          altips:
-            - 192.168.1.30
         - cname: freenas
           profile: server
           sans:
             - freenas.{{ domain }}
           altips:
             - 192.168.1.175
-        - cname: vault
-          profile: server
-          sans:
-            - vault.{{ domain }}
-          altips:
-            - 192.168.1.136
         - cname: gateway
           profile: server
           sans:
             - gateway.{{ domain }}
           altips:
-            - 192.168.1.185
+            - 192.168.1.126
