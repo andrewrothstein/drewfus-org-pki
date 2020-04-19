@@ -15,25 +15,29 @@
       pki_ca:
         expiry: '8760h'
         pathlen: 0
-        cname: ca
-        sans:
-          - ca.{{ domain }}
+        cname: ca.{{ domain }}
       pki_servers:
-        - cname: edge
+        - cname: edge.{{ domain }}
           profile: server
-          sans:
-            - edge.{{ domain }}
           altips:
             - 192.168.1.1
-        - cname: freenas
+        - cname: freenas.{{ domain }}
           profile: server
-          sans:
-            - freenas.{{ domain }}
           altips:
             - 192.168.1.175
-        - cname: gateway
+        - cname: core-001.{{ domain }}
           profile: server
           sans:
-            - gateway.{{ domain }}
-          altips:
-            - 192.168.1.126
+            - core-001
+        - cname: core-002.{{ domain }}
+          profile: server
+          sans:
+            - core-002
+        - cname: core-003.{{ domain }}
+          profile: server
+          sans:
+            - core-003
+        - cname: core-004.{{ domain }}
+          profile: server
+          sans:
+            - core-004
