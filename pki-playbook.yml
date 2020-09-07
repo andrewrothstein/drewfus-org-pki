@@ -21,10 +21,6 @@
           profile: server
           altips:
             - 192.168.1.1
-        - cname: freenas.{{ domain }}
-          profile: server
-          altips:
-            - 192.168.1.175
         - cname: core-001.{{ domain }}
           profile: server
           sans:
@@ -41,3 +37,11 @@
           profile: server
           sans:
             - core-004
+        - cname: core-005.{{ domain }}
+          profile: server
+          sans:
+            - core-005
+        - cname: gitlab.{{ domain }}
+          profile: server
+          sans:
+            - gitlab
