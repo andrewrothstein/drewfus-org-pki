@@ -24,24 +24,24 @@
         - cname: core-001.{{ domain }}
           profile: server
           sans:
-            - core-001
+            - core-001.{{ domain }}
         - cname: core-002.{{ domain }}
           profile: server
           sans:
-            - core-002
+            - core-002.{{ domain }}
         - cname: core-003.{{ domain }}
           profile: server
           sans:
-            - core-003
+            - core-003.{{ domain }}
         - cname: core-004.{{ domain }}
           profile: server
           sans:
-            - core-004
+            - core-004.{{ domain }}
         - cname: core-005.{{ domain }}
           profile: server
           sans:
-            - core-005
+            - core-005.{{ domain }}
         - cname: gitlab.{{ domain }}
           profile: server
           sans:
-            - gitlab
+            - gitlab.{{ domain }}
