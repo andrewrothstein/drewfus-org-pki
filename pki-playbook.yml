@@ -45,3 +45,7 @@
           profile: server
           sans:
             - gitlab.{{ domain }}
+        - cname: matchbox.{{ domain }}
+          profile: server
+          sans:
+            - matchbox.{{ domain }}
