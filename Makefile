@@ -9,7 +9,7 @@ galaxydeps:
 
 pki:
 	@echo building the pki...
-	ansible-playbook pki-playbook.yml
+	ansible-playbook pki-playbook.yml -e pkis_dir=${HOME}/keybase/private/andrewrothstein/pkis
 	@echo done!
 
 all: galaxydeps pki
