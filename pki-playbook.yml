@@ -49,3 +49,7 @@
           profile: server
           sans:
             - matchbox.{{ domain }}
+        - cname: console.{{ domain }}
+          profile: server
+          sans:
+            - console.{{ domain }}
