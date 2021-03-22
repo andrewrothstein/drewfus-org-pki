@@ -19,6 +19,8 @@
       pki_servers:
         - cname: edge.{{ domain }}
           profile: server
+          sans:
+            - edge.{{ domain }}
           altips:
             - 192.168.1.1
         - cname: core-001.{{ domain }}
