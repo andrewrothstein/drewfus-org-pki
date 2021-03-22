@@ -1,2 +1,5 @@
 [ca]
 localhost ansible_connection=local
+
+[ca:vars]
+ansible_python_interpreter=/usr/bin/python3
