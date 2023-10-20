@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  vars:
+    domain: elephant-frog.ts.net
+    pkis_dir: '{{ ansible_env.HOME }}/pkis'
+    pki_dir: '{{ pkis_dir }}/{{ domain }}'
+    pki_names:
+      - C: US
+        L: Englewood
+        O: Drewfus
+        OU: WWW
+        ST: New Jersey
+    pki_ca:
+      expiry: '8760h'
+      pathlen: 0
+      cname: ca.{{ domain }}
+    pki_servers:
+      - cname: gateway.{{ domain }}
+        profile: server
+      - cname: console.{{ domain }}
+        profile: server
+      - cname: vault.{{ domain }}
+        profile: server
+  roles:
+    - andrewrothstein.pki
