@@ -1,0 +1,11 @@
+---
+version: '3'
+tasks:
+  galaxy:
+    cmds:
+      - ansible-galaxy install -r requirements.yml
+  default:
+    deps:
+      - task: galaxy
+    cmds:
+      - ansible-playbook -i inventory.yml playbook.yml
