@@ -15,11 +15,25 @@
       pathlen: 0
       cname: ca.{{ domain }}
     pki_servers:
+      - cname: truenas.{{ domain }}
+        include_localhost: true
+        profile: server
+        sans:
+          - truenas.{{ domain }}
       - cname: gateway.{{ domain }}
+        include_localhost: true
         profile: server
+        sans:
+          - gateway.{{ domain }}
       - cname: console.{{ domain }}
+        include_localhost: true
         profile: server
+        sans:
+          - console.{{ domain }}
       - cname: vault.{{ domain }}
+        include_localhost: true
         profile: server
+        sans:
+          - vault.{{ domain }}
   roles:
     - andrewrothstein.pki
